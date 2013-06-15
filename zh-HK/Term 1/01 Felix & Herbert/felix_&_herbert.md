@@ -3,81 +3,82 @@
 #小飛與小拔
 
 __介紹:__
-我們將會製作一個__小貓小飛__捕捉__老鼠小拔__的遊戲。你用滑鼠控制着小拔，別讓小飛捉到它。小拔避開愈久，積分就愈高。但別讓小飛捉到，要扣分啊。
+我們將會製作一個__小貓小飛__捕捉__老鼠小拔__的遊戲。你用滑鼠控制着小拔，別讓小飛捉到牠。小拔避開愈久，積分就愈高。但別讓小飛捉到，要扣分啊。
 ##￼第一步：小飛跟着鼠標跑
-1. Start a new project.
+1. 開始新的作品.
 Keep track of your progress by ticking off the boxes below:
-2. Click on the stage next to the sprite and switch to the Backgrounds tab, and then import the background indoors/hall. Delete the original blank background.
-3. 把sprite 的名字改成「小飛」。
-4. Make sure Felix only points left-right by clicking this button:
-5. Create this script:
+2. 點一下角色旁邊的舞台，並轉到背景標籤。然後匯入背景 indoors/hall. 刪除原本的空白背景。
+3. 把角色的名字改成「小飛」。
+4. 按這個鍵，以確定小飛只面向左右：
+5. 建立程式：
 
 ```scratch
 
-	When FLAG clicked
-	forever
-		point towards mouse-pointer
-		move 10 steps
-		next costume
-		play drum 62 for 0.3 beats
-	(end forever)
+	當 (綠旗子) 被點一下
+	重覆執行
+		面向 滑鼠游標
+		移動 10 步
+		下一個造形
+		彈奏鼓聲 62 0.3 拍
+	(重覆執行 到此為止)
 ```
 		
-###Test Your Project
-__Click the green flag.__
-小飛有追着鼠標跑嗎？他移動時看起來像在走路嗎？他移動的快慢冾當嗎？
-Save your project
+###測試你的作品
+__點一下小綠旗__
+
+小飛有追着鼠標跑嗎？他移動時看起來像在走路嗎？他移動的速度洽當嗎？
+把你的作品存檔。
 ##第二步：小飛追趕小拔
 
 __接下來，我們要小飛追着老鼠小拔，而不是鼠標。__
 
-1. Create another sprite using the choose new sprite from file button and selecting animals/mouse1.
-2. 把sprite 的名字改成「小拔」。
-3. Edit the costume and make it smaller than Felix.
-Try six clicks on the shrink button:
-4. Make sure Herbert only points left-right. 5. Give Herbert this script:
+1. 在開啟角色檔案，選animals/mouse1 來建立新角色。
+2. 把角色的名字改成「小拔」。
+3. 把造形修改得比小飛細小。試試按六次縮小鍵：
+4. 確定小拔只面向左右。 
+5. 給小拔這個程式:
 
 
 ```scratch
 	
-	When FLAG clicked
-	forever
-		go to mouse-pointer
-		point towards Felix
-	(end forever)
+	當 (綠旗子) 被點一下
+	重覆執行
+		移到 滑鼠游標
+		面向 小飛
+	(重覆執行 到此為止)
 ```
-###Test Your Project
+###測試你的作品
 
-__Click the green flag.__
+__點一下小綠旗__
 
 小拔有隨着着鼠標移動嗎？小飛有追着小拔嗎？
-Save your project.
+把你的作品存檔。
 ##第三步：小飛捉到小拔後說些話
 
 __我們想小飛知道他捉到了小拔，還要告訴我們。__
 
-1. Change Felix’s script to be this:
+1. 將小飛的程式修改成：
 
 ```scratch
 	
-	when FLAG clicked
-	forever
-		point towards mouse-pointer
-		move 10 steps
-		next costume
-		play drum 62 for 0.3 beats
-		if touching Herbert
+	當 (綠旗子) 被點一下
+	重覆執行
+		面向 滑鼠游標
+		移動 10 步
+		下一個造形
+		彈奏鼓聲 62 0.3 拍
+		如果 碰到 小拔
 			say Caught you! for 1 secs
-		(end if)
-	(end forever)
+		(如果 到此為止)
+	(重覆執行 到此為止)
 ```
 
-###Test Your Project
+###測試你的作品
 
-__Click the green flag.__
+__點一下小綠旗__
 
 小飛捉到了小拔時說了葛麼？
-Save your project.
+把你的作品存檔。
 
 ##第四步:￼小拔被捉到時會變成鬼魂
 
@@ -87,69 +88,73 @@ __Instead of Felix saying something, we want Herbert to turn into a ghost when h
 
 ```scratch
 	
-	when FLAG clicked
-	forever
-		point towards mouse-pointer
-		move 10 steps
-		next costume
-		play drum 62 for 0.3 beats
-		if touching Herbert
-			broadcast caught
-			play drum 58 for 0.2 beats
-			wait 1 sec
-		(end if)
-	(end forever)
+	當 (綠旗子) 被點一下
+	重覆執行
+		面向 滑鼠游標
+		移動 10 步
+		下一個造形
+		彈奏鼓聲 62 0.3 拍
+		如果碰到 小拔
+			廣播 捉到了
+			彈奏鼓聲 68 0.2 拍
+			等待 1 秒
+		(如果 到此為止)
+	(重覆執行 到此為止)
 ```
-2. Import a new costume into Herbert from fantasy/ghost2-a.
-3. Edit the costume to make it smaller.
-Six clicks on the shrink button should do.
-4. Change the names of Herbert’s
-costumes so the mouse costume is
-called ‘alive’ and the ghost costume is called ‘dead’.
-5. Create a new script for Herbert to turn him into a ghost:
+
+2. 從 fantasy/ghost2-a　匯入一個新造形給小拔.
+3. 把造形縮小一點。按縮小鍵六次就夠。
+4. 修改小拔的造形名稱，老鼠造形叫做「生還」，我魂造形叫「死掉了」。
+5. 給小拔建立一個程式，把牠變成鬼魂：
+
 ```scratch
 	
-	when I receive caught
-	switch to costume dead
-	wait 0.5 secs
-	switch to costume alive
+	當接收到 捉到了
+	切換到造型 死了
+	等待 0.5 秒
+	切換到造型 生還
 ```
 	
-###Test Your Project
+###測試你的作品
 
-__Click the green flag.__
+__點一下小綠旗__
 
 小拔被捉到時有變成鬼魂嗎？
 小飛在正確的時機發出正確的聲音嗎？
-Does Felix still stay still for long enough for Herbert to get away
-Save your project
+Does Felix still stay still for long enough for Herbert to get away.
+把你的作品存檔。
 ##第五步：保存積分
-__Let’s add a score so we know how well we do at keeping Herbert alive.
-We’ll start the score at zero and increase it by one every second. If Felix catches Herbert, we’ll reduce the score by one hundred.__
-1. Make a variable, for all sprites, called Score. Click on Variables in the top menu, make a variable and name it score
-2. On the stage, create these two scripts
+
+__讓我們加入一個積分，我們得知我們保護小拔做得如何。
+積分由零開始，每秒增加一分。如果小飛捉到小拔，積分就會減掉一百分。__
+
+1. 產生一個變數給所有角色，稱為「積分」。在上方菜單點一下變數, 產生一個變數並稱為積分。
+2. 在舞台建立兩個程式
+
 ```scratch
 	
-	when FLAG clicked
-	set score to 0
-	forever
-		change score by 1
-		wait 1 secs
-	(end forever)
+	當 (綠旗子) 被點一下
+	將變數 積分 的值設為 0
+	重覆執行
+		將變數 積分 的值增加 1
+		等待 1 秒
+	(重覆執行　到此為止)
 	
-	when I receive caught
-	change score by -100
+	當接收到 捉到了
+	將變數 積分 的值增加 -100
 ```
 	
-###Test Your Project
+###測試你的作品
 
-__Click the green flag.__
+__點一下小綠旗__
 
 積分是否每秒鐘都在增加呢？
 小拔被捉到時，積分是否減少了一百分呢？
 如果小拔被捉到時，積分還不夠一百分，會發生甚麼事呢？
 開始一個新遊戲時，積分是否回到零分呢？
 
-Save your project
+把你的作品存檔。
+
 __做得好，你完成了！你現在可以好好的玩這遊戲了！__
-Don’t forget you can share your game with all your friends and family by clicking on __Share__ on the menu bar
+
+別忘了你可以在菜單上點一下＿＿分享＿＿，和你親友們分享你的遊戲。
