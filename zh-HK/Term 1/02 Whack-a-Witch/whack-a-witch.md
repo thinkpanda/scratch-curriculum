@@ -1,6 +1,6 @@
 第一級
 
-#打地鼠
+#打女巫
 
 __介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來獲得積分. 這個遊戲的目標是盡可能在30秒內獲得最多的積分！
 ##￼第一步: 創建一個飛行中的女巫
@@ -59,7 +59,7 @@ __介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來�
 
 ###嘗試__嘗試改變隨機數目的範圍。 如果你選擇了十分大或十分小的數目，會發生什麼事？__(這能夠給你線索如何能女巫越飛越快嗎？)##￼第三步: 點一下女巫令她消失
 將這個作品變成遊戲，玩家在點擊女巫時會令她消失， 在她消失的同時會播放聲音。
-1. 輚到背景標籤， 匯入 electronic/fairydust. 
+1. 轉到背景標籤， 匯入 electronic/fairydust. 
 2. 新增以下程式到女巫：
 ```scratch
 	當Sprite1 被點一下
@@ -68,35 +68,38 @@ __介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來�
 ```
 ###測試你的作品__點一下小綠旗__
 當你點一下女巫，她有消失和播放聲音嗎？
-把你的作吅存檔
-##Step 4: Add a score and timer
-We’ve got a witch, but now we want to make a game! We want to score points every time we click on the witch but we also want to have a time limit on the game. We can use a variable for the score and the timer.
-1. Create a new Variable for all sprites called score, and alter the script for the witch to increase this variable by one when she is clicked.
-```scratch
-	when sprite1 clicked
-	hide
-	play sound Fairydust
-	change score by 1
-```2. Switch to the Stage and create a new variable (this time just for the stage) called timer. Add a new script that occurs when the green flag is clicked to set timer to 30 and reset the score to 0. Then use a repeat until block to wait a second and then reduce timer byone. This should repeat until timer is 0, at which point use stop all to stop the game.
-```scratch
-	when FLAG clicked
-	set timer to 30
-	set score to 0
-	repeat until timer = 0
-		wait 1 secs
-		change timer by -1
-	(end repeat)
-	stop all
-```
-###Test Your Project__Click the green flag.__ 
-Save your project
+把你的作品存檔。
+##第四步: 加上積分及計時器
 
-###Things to try__How might you make the witch speed up as the game goes on?__
-__Well done you’ve finished the basic game. There are more things you can do to your game though. Have a go at this challenge!__
-##Challenge: add more witches
-If one witch is good, more must be better! Let’s have three witches flying around.1. Duplicate the witch by right-clicking it in the sprite list.2. For each witch adjust the size of the sprite so the witches are different sizes.3. For each witch change the speed variable so that they fly at different speeds.4. Move the witches around the canvas so that they are not all together.
-###Test Your Project__Click the green flag.__ 
-Do you have three witches that move from side to side across the screen, randomly appear and disappear, and disappear when you click on them?
-Save your project
-###Things to try1. How many witches is a good number for the game?￼￼2. Can you make the witches look different? You could either edit their costumes, or use some blocks from the Looks palette to change them.3. Can you make the witches be worth different points? How about making the fastest (and smallest) witch worth 10 points?
-__Well done you’ve finished, now you can enjoy the game!__Don’t forget you can share your game with all your friends and family by clicking on __Share__ on the menu bar!
+我們巳經有了一個女巫, 但我們要將這個作品變成遊戲。在限定的遊戲時間中，我們能夠以點擊女巫來獲取積分。我們可以能用變數積分和.1. 產生一個適用所有角色及名為積分的變數， 修改女巫的程式，當我們她點擊時積分會增加1。
+```scratch
+	當Sprite1 被點一下
+	隱藏
+	播放聲音 Fairydust
+	將變數 積分 的值增加 1
+```2. 點選舞台及產生一個名為計時器的變數. 新增程式，當遊戲開始時，計時器會設為30，積分會設為0。直至計時器奱為0，重複執行等待1秒及令到計時器﹣1。最後，停止執行遊戲。
+```scratch
+	當 (綠旗子) 被點一下
+	將變數 計時器 的值設為30
+	將變數 積分 的值設為0
+	重複執行直至 計時器 = 0
+		等待 1 秒
+		將變數 計時器 的值增加 ﹣1
+	(重複執行)
+	全部停止
+```
+###測試你的作品__點一下小綠旗__
+把你的作品存檔。
+
+###嘗試__如何令女巫越飛越快?__
+__做得好！你巳經完成了基本的遊戲。 還有更多事情可以做，在這個挑戰中一試身手！__
+##挑戰: 新增更多女巫
+更多的女巫會更好! 讓我們令三個女巫飛來飛去！1. 在Sprite1上按右健，複制女巫。2. 調整每個女巫的大小，所有女巫都有不同大小。3. 調整每個女巫的速度變數，所有女巫都有不同的飛行速度。4. 在畫面上移動女巫令她們不在同一個地點。
+###測試你的作品__點一下小綠旗__
+
+有三個女巫在屏幕另一邊移動到另一邊嗎？
+有三個女巫在屏幕會隨機出現及消失嗎？
+當你點擊那三個女巫，她們會消失嗎？
+把你的作品存檔。
+###嘗試1. 這個遊戲最好有多少女巫？￼￼2. 你能改變女巫的外形嗎？你可以編輯他們的服裝及色彩。3. 你能令點擊不同女巫獲得不同積分嗎? 例如點擊最快的女巫能獲得10點積分。__做得好！ 你巳經完成，現在你可以享受遊戲！__
+點選目錄上的分享，不要忘記你能將遊戲 __分享__ 給你的朋友和家人！
