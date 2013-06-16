@@ -1,36 +1,42 @@
-Level 1
+第一級
 
-#Whack-a-Witch
+#打地鼠
 
-__Introduction:__This project is like the game __Whack-a-Mole__. You get points for hitting the witches that appear on the screen. The aim is to get as many points as possible in 30 seconds!
-##￼STEP 1: Create a flying witch
-1. Start a new scratch project.2. Remove the cat sprite and replace the background with the nature/woodsbackground.3. Use the new sprite from file button to add a new witchsprite to the project (use the fantasy/witch1 costume). 
-Now we want to make our witch move
+__介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來獲得積分. 這個遊戲的目標是盡可能在30秒內獲得最多的積分！
+##￼第一步: 創建一個飛行中的女巫
+1. 開始新的作品。2. 移除貓角色及將背景轉為自然／樹林。3. 在新增角色一欄，按開啟角色檔案將女巫新增到作品中（使用costumes/fantasy/witch1）。
 
-4. Add a Variable for this sprite only called speed .On the Stage, the stage monitor for this variable should say “Sprite1 speed”.If it just says “speed”, delete the variable and create it again, for this sprite only. Uncheck the box next to the speed block in theVariables palette so it does not show on the Stage.The speed variable will control how fast the witch moves. We use a variable so that we can change how fast the witch moves as the game progresses.5. We want the witch to start moving when the game starts, so make a script like this:
+現在，我們要讓女巫移動
+
+4. 產生一個名為速度的變數給女巫 。
+在舞台上，這個變名應該會顯示為“Sprite1 速度”。如果顯示為“速度”，刪除這個變數及再產生一個只適用此角色的變數。取消勾選速度變數旁的方格令舞台不再顯示它。這個速度變數會控制女巫移動的速度。在遊戲進行中，我們將利用這個變數來控制女巫的速度。5. 在遊戲開始時，我們希望女巫會移動，給她這個程式：
 
 ```scratch
-	when FLAG clicked
-	set speed to 5
-	forever
-		move speed steps
-	(end forever)
+	當 (綠旗子) 被點一下
+	將變數 速度 的值設為5
+	重複執行
+		移動 速度 步
+	(重複執行)
 ```		
-###Test Your Project__Click the green flag__ and see what your witch does. Why does she get stuck on the edge of the screen?
-6. To stop the witch getting stuck we need to make her go back the other way when she touches the edge of the screen. Below yourmove speed steps block add an if on edge, bounce block.
+###測試你的作品__點一下小綠旗__ 和觀察你的女巫。 為什麼她會卡在屏幕的邊緣？
+
+6. 為了避免她卡在屏幕的邊緣. 我們讓她碰到邊緣就反彈。在移動 速度 步以下，插入碰到邊緣就反彈。
 ```scratch
-	when FLAG clicked
-	set speed to 5
-	forever
-		move speed steps
-		if on edge, bounce
-	(end forever)
-```7. To stop the witch flipping upside down, click on the __only face left-right button__ in the Sprite Summary area.
+	當 (綠旗子) 被點一下
+	將變數 速度 的值設為5
+	重複執行
+		移動 速度 步
+		碰到邊緣就反彈
+	(重複執行)
+```
 
-###Test Your Project__Click the green flag.__ 
-Does the witch move from side to side across the screen?
+7. 要停止女巫翻轉向下，在角色摘要區域，按只允許左、右翻轉。
 
-Save your project
+###測試你的作品__點一下小綠旗__
+
+女巫在屏幕另一邊移動到另一邊嗎？
+
+把你的作品存檔。
 
 ###Things to try￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼__Try changing the value of the speed variable to make her fly faster or slower.____How would you make the witch get faster the longer she flies?__
 (This is a tricky one, so don’t worry if you can’t see how to do it. You’ll get more clues as you work through the project.)##STEP 2: Make the witch appear & vanish randomly
