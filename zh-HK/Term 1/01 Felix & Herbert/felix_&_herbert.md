@@ -6,7 +6,7 @@ __介紹:__
 我們將會製作一個 __小貓小飛__ 捕捉 __老鼠小拔__ 的遊戲。你用滑鼠控制着小拔，別讓小飛捉到牠。小拔避開愈久，積分就愈高。但別讓小飛捉到，要扣分啊。
 ##￼第一步：小飛跟着鼠標跑
 1. 開始新的作品.
-Keep track of your progress by ticking off the boxes below:
+在下列方格打剔以便跟進你的進度:
 2. 點一下角色旁邊的舞台，並轉到背景標籤。然後匯入背景 indoors/hall. 刪除原本的空白背景。
 3. 把角色的名字改成「小飛」。
 4. 按這個鍵，以確定小飛只面向左右：
@@ -82,9 +82,9 @@ __點一下小綠旗__
 
 ##第四步:￼小拔被捉到時會變成鬼魂
 
-__Instead of Felix saying something, we want Herbert to turn into a ghost when he’s caught.__
+__我們想小拔被捉時會變成鬼魂而不是小飛發出聲音__
 
-1. Change Felix’s script to send this message when he catches Herbert.
+1. 修改小飛的程式，讓他捉到小拔時發出這個訊息
 
 ```scratch
 	
@@ -121,7 +121,8 @@ __點一下小綠旗__
 
 小拔被捉到時有變成鬼魂嗎？
 小飛在正確的時機發出正確的聲音嗎？
-Does Felix still stay still for long enough for Herbert to get away.
+小飛保持了足夠時間讓小拔離開嗎？
+
 把你的作品存檔。
 ##第五步：保存積分
 
