@@ -4,7 +4,7 @@
 
 __介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來獲得積分. 這個遊戲的目標是盡可能在30秒內獲得最多的積分！
 ##￼第一步: 創建一個飛行中的女巫
-1. 開始新的作品。2. 移除貓角色及將背景轉為自然／樹林。3. 在新增角色一欄，按開啟角色檔案將女巫新增到作品中（使用costumes/fantasy/witch1）。
+1. 開始新的作品。2. 移除貓角色及匯入背景 nature/woods。3. 在新增角色一欄，按開啟角色檔案將女巫新增到作品中（使用costumes/fantasy/witch1）。
 
 現在，我們要讓女巫移動
 
@@ -38,36 +38,37 @@ __介紹:__這個作品和 __打地鼠__ 相似。 點擊畫面上的女巫來�
 
 把你的作品存檔。
 
-###Things to try￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼__Try changing the value of the speed variable to make her fly faster or slower.____How would you make the witch get faster the longer she flies?__
-(This is a tricky one, so don’t worry if you can’t see how to do it. You’ll get more clues as you work through the project.)##STEP 2: Make the witch appear & vanish randomly
-To make the game more fun, we want the witch to appear and vanish randomly. We’ll do that with another script that runs at the same time as the one that moves the witch. This new script needs to hide the witch for a random time, then show her for a random time, and repeat that forever (or until the game finishes).
-Create this script for the witch:
-```scratch
-	when FLAG clicked
-	forever
-		hide
-		wait pick random 2 to 5 secs
-		show
-		wait pick random 3 to 5 secs
-	(end forever)
-```
-###Test Your Project__Click the green flag.__ 
-Does the witch move from side to side across the screen and vanish and appear again randomly?
+###嘗試
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼__改變速度變數的值令女巫移動快一點或慢一點。____如何令女巫越飛越快?__(這個是棘手的問題，不要擔心。通常完成這個作品，你會得到更多的線索。)##第二步: 令女巫隨機出現及消失
 
-Save your project
-
-###Things to try__Try changing the range of the random numbers. What happens if you pick very big numbers or very small numbers?__(Does this give you any more clues for how to make the witch speed up the longer the game is played?)##￼STEP 3: Make the witch disappear when she’s clicked
-To turn this into a game, we need to give the player something to do. They need to click on the witch to make her disappear. When the witch is clicked, we want her to disappear and play a sound.
-1. In the Sounds tab, import the sound electronic/fairydust. 
-2. Add this script to the witch:
+為了令遊戲更加有趣， 在令女巫移動的程式之下，我們將會創作另一個程式。 新程式會令令女巫隨機出現及消失直到遊戲完成。
+給女巫這個程式：
 ```scratch
-	when sprite1 clicked
-	hide
-	play sound Fairydust
+	當 (綠旗子) 被點一下
+	重複執行
+		隱藏
+		等符 在 2 到 5 間隨機選一個數 秒
+		顯示
+		等符 在 3 到 5 間隨機選一個數 秒
+	(重複執行)
 ```
-###Test Your Project__Click the green flag.__ 
-Does the witch disappear and play the sound when you click it?
-Save your project
+###測試你的作品__點一下小綠旗__
+女巫在屏幕另一邊移動到另一邊而且會隨機出現及消失嗎？
+
+把你的作品存檔。
+
+###嘗試__嘗試改變隨機數目的範圍。 如果你選擇了十分大或十分小的數目，會發生什麼事？__(這能夠給你線索如何能女巫越飛越快嗎？)##￼第三步: 點一下女巫令她消失
+將這個作品變成遊戲，玩家在點擊女巫時會令她消失， 在她消失的同時會播放聲音。
+1. 輚到背景標籤， 匯入 electronic/fairydust. 
+2. 新增以下程式到女巫：
+```scratch
+	當Sprite1 被點一下
+	隱藏
+	播放聲音 Fairydust
+```
+###測試你的作品__點一下小綠旗__
+當你點一下女巫，她有消失和播放聲音嗎？
+把你的作吅存檔
 ##Step 4: Add a score and timer
 We’ve got a witch, but now we want to make a game! We want to score points every time we click on the witch but we also want to have a time limit on the game. We can use a variable for the score and the timer.
 1. Create a new Variable for all sprites called score, and alter the script for the witch to increase this variable by one when she is clicked.
